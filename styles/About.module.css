@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  height: 5000px;
+  margin-top: 30px;
+  padding: 50px;
+  background: rgb(199, 177, 177);
+}
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto 20%;
+  gap: 30px;
+  align-items: center;
+}
+.textContent {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  justify-content: center;
+}
+.images {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.sulu {
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.content h3 {
+  font-size: 40px;
+}
+.content p {
+  font-size: 20px;
+}
+.tech {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 50px;
+  margin-left: 20px;
+}
+.tech li {
+  font-size: 20px;
+}
