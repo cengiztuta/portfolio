@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Sidebar from "@/components/Sidebar";
 import About from "./About";
+import WhatIdo from "./WhatIdo";
 export default function Home() {
   return (
     <div>
@@ -22,6 +23,7 @@ export default function Home() {
         </div>
       </div>
       <About />
+      <WhatIdo />
     </div>
   );
 }
