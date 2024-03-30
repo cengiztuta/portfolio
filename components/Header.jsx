@@ -1,18 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { headerNavigations } from "@/helpers";
 
 const Header = () => {
-  const router = useRouter();
   const [lng, SetLng] = useState(false);
-  const navigations = [
-    { name: "About", percentage: 13 },
-    { name: "Skills", percentage: 27 },
-    { name: "Experience", percentage: 60 },
-    { name: "Projects", percentage: 80 },
-    { name: "Contact", percentage: 100 },
-  ];
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const isScrolledFromStorage =
+      localStorage.getItem("isScrolled") === "true" || false;
+    setIsScrolled(isScrolledFromStorage);
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setIsScrolled(prevScrollPos > currentScrollPos || currentScrollPos === 0);
+      setPrevScrollPos(currentScrollPos);
+      localStorage.setItem(
+        "isScrolled",
+        JSON.stringify(
+          prevScrollPos > currentScrollPos || currentScrollPos === 0
+        )
+      );
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   const handleClick = (percentage) => {
     const windowHeight = window.innerHeight;
@@ -25,7 +41,7 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={isScrolled ? styles.container : styles.hideContainer}>
       <div>
         {" "}
         <Link href={"/"} className={styles.cengiz}>
@@ -34,7 +50,7 @@ const Header = () => {
       </div>
 
       <div className={styles.navigationsContainer}>
-        {navigations.map((item, index) => (
+        {headerNavigations.map((item, index) => (
           <div
             key={index}
             onClick={() => handleClick(item.percentage)}

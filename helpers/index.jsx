@@ -5,7 +5,7 @@ export const skillsSection = {
     {
       id: getID(),
       title: "Front-end Development",
-      // animation lottie file: https://lottiefiles.com/
+
       lottie: {
         light: "/lotties/frontend.json",
         dark: "/lotties/frontend-dark.json",
@@ -16,7 +16,6 @@ export const skillsSection = {
         "Building RESTful APIs in Express",
       ],
       softwareSkills: [
-        // iconify icons: https://icon-sets.iconify.design/
         { name: "html-5", icon: "vscode-icons:file-type-html" },
         { name: "CSS-3", icon: "vscode-icons:file-type-css" },
         { name: "javaScript", icon: "vscode-icons:file-type-js-official" },
@@ -31,3 +30,10 @@ export const skillsSection = {
     },
   ],
 };
+export const headerNavigations = [
+  { name: "About", percentage: 13 },
+  { name: "Skills", percentage: 27 },
+  { name: "Experience", percentage: 60 },
+  { name: "Projects", percentage: 80 },
+  { name: "Contact", percentage: 100 },
+];
