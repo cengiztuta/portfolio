@@ -8,9 +8,48 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: light-dark(White, rgb(1, 16, 66));
+  transition: all 0.2s linear;
+}
+:has(div[id="Light"]) {
+  color-scheme: Light;
+}
+body:has(div[id="Dark"]) {
+  color-scheme: Dark;
 }
 
 a {
-  color: inherit;
+  color: light-dark(black, White);
   text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+h1 {
+  transition: all 0.2s linear;
+  color: light-dark(black, White);
+}
+p {
+  color: light-dark(black, White);
+  transition: all 0.2s linear;
+}
+h2 {
+  color: light-dark(black, White);
+  transition: all 0.2s linear;
+}
+h3 {
+  color: light-dark(black, White);
+  transition: all 0.2s linear;
+}
+h4 {
+  color: light-dark(black, White);
+  transition: all 0.2s linear;
+}
+li {
+  color: light-dark(black, White);
+  transition: all 0.2s linear;
+}
+
+header {
+  background-color: light-dark(White, Black);
+  transition: all 0.2s linear;
 }

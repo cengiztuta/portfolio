@@ -5,6 +5,7 @@ import { headerNavigations } from "@/helpers";
 
 const Header = () => {
   const [lng, SetLng] = useState(false);
+  const [theme, setTheme] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -45,7 +46,7 @@ const Header = () => {
       <div>
         {" "}
         <Link href={"/"} className={styles.cengiz}>
-          Cengiz TUTA
+          <p>Cengiz TUTA </p>
         </Link>{" "}
       </div>
 
@@ -56,10 +57,21 @@ const Header = () => {
             onClick={() => handleClick(item.percentage)}
             className={styles.navigations}
           >
-            {item.name}
+            <p>{item.name}</p>
           </div>
         ))}
 
+        <div
+          className={styles.toggleContainer}
+          onClick={() => setTheme(!theme)}
+        >
+          <div
+            id={`${theme ? "Light" : "Dark"}`}
+            className={theme ? styles.toggled : styles.unToggled}
+          >
+            {theme ? "Light" : "Dark"}
+          </div>
+        </div>
         <div className={styles.toggleContainer} onClick={() => SetLng(!lng)}>
           <div className={lng ? styles.toggled : styles.unToggled}>
             {lng ? "TR" : "EN"}

@@ -5,7 +5,8 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
 }
 .container span {
   height: 200px;

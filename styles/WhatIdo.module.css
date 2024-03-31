@@ -40,7 +40,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 20px;
-  row-gap: 30px;
+  row-gap: 50px;
 }
 .featuresElement {
   border-radius: 100%;
@@ -61,6 +61,7 @@
 }
 
 .skill {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -68,6 +69,9 @@
   width: 100px;
   height: 100px;
   border-radius: 100%;
+}
+.skill p {
+  color: light-dark(black, black);
 }
 
 .hoverElement {

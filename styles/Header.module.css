@@ -7,8 +7,7 @@
   padding: 20px;
   top: 0;
   position: fixed;
-  transition: top 0.5s linear;
-  background: white;
+  transition: top 0.3s linear;
 }
 .hideContainer {
   width: 100%;
@@ -19,8 +18,7 @@
   padding: 20px;
   top: -100px;
   position: fixed;
-  transition: top 0.5s linear;
-  background: white;
+  transition: top 0.3s linear;
 }
 .cengiz {
   font-size: 44px;
@@ -50,7 +48,7 @@
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color:light-dark(black,white);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }

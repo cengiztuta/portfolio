@@ -5,7 +5,11 @@ import "@/styles/globals.css";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header />
+      <header>
+        {" "}
+        <Header />
+      </header>
+
       <Component {...pageProps} />
       <Footer />
     </>
