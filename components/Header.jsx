@@ -6,43 +6,34 @@ import { headerNavigations } from "@/helpers";
 const Header = () => {
   const [lng, SetLng] = useState(false);
   const [theme, setTheme] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
-    const isScrolledFromStorage =
-      localStorage.getItem("isScrolled") === "true" || false;
-    setIsScrolled(isScrolledFromStorage);
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setIsScrolled(prevScrollPos > currentScrollPos || currentScrollPos === 0);
-      setPrevScrollPos(currentScrollPos);
-      localStorage.setItem(
-        "isScrolled",
-        JSON.stringify(
-          prevScrollPos > currentScrollPos || currentScrollPos === 0
-        )
-      );
+      const scrollTop = window.pageYOffset;
+
+      // Yukarı kaydırılıyorsa header'ı göster
+      if (scrollTop < lastScrollTop) {
+        setIsHeaderVisible(true);
+      }
+      // Aşağı kaydırılıyorsa header'ı gizle
+      else if (scrollTop > lastScrollTop) {
+        setIsHeaderVisible(false);
+      }
+
+      setLastScrollTop(scrollTop);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
-
-  const handleClick = (percentage) => {
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.clientHeight;
-    const scrollTo = (bodyHeight - windowHeight) * (percentage / 100);
-    window.scrollTo({
-      top: scrollTo,
-      behavior: "smooth", // Animasyonlu kaydırma için
-    });
-  };
+  }, [lastScrollTop]);
 
   return (
-    <div className={isScrolled ? styles.container : styles.hideContainer}>
+    <div className={isHeaderVisible ? styles.container : styles.hideContainer}>
       <div>
         {" "}
         <Link href={"/"} className={styles.cengiz}>

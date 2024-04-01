@@ -22,34 +22,43 @@ a {
   color: light-dark(black, White);
   text-decoration: none;
   transition: all 0.2s linear;
+  font-style: italic;
 }
 
 h1 {
   transition: all 0.2s linear;
   color: light-dark(black, White);
+  font-style: italic;
 }
 p {
   color: light-dark(black, White);
+  font-style: italic;
+
   transition: all 0.2s linear;
 }
 h2 {
   color: light-dark(black, White);
   transition: all 0.2s linear;
+  font-style: italic;
 }
 h3 {
   color: light-dark(black, White);
   transition: all 0.2s linear;
+  font-style: italic;
 }
 h4 {
   color: light-dark(black, White);
   transition: all 0.2s linear;
+  font-style: italic;
 }
 li {
   color: light-dark(black, White);
   transition: all 0.2s linear;
+  font-style: italic;
 }
 
 header {
   background-color: light-dark(White, Black);
   transition: all 0.2s linear;
+  font-style: italic;
 }

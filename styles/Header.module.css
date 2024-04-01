@@ -8,6 +8,8 @@
   top: 0;
   position: fixed;
   transition: top 0.3s linear;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
 }
 .hideContainer {
   width: 100%;
@@ -22,8 +24,9 @@
 }
 .cengiz {
   font-size: 44px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 .navigationsContainer {
   display: flex;
@@ -32,6 +35,9 @@
   width: auto;
   column-gap: 40px;
   align-items: center;
+  position: absolute;
+  right: 20px;
+  animation: rightToLeft 1s forwards;
 }
 .navigations {
   font-size: 22px;
@@ -48,7 +54,7 @@
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color:light-dark(black,white);
+  background-color: light-dark(black, white);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -89,4 +95,20 @@
   font-size: 20px;
   transform: translateX(70%);
   transition: transform 0.2s linear;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rightToLeft {
+  from {
+    right: -40%;
+  }
+  to {
+    right: 20px;
+  }
 }
