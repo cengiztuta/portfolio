@@ -8,9 +8,11 @@
   top: 0;
   position: fixed;
   transition: top 0.3s linear;
-  opacity: 0;
-  animation: fadeIn 3s forwards;
+  z-index: 10000;
+  background-color: light-dark(White, rgb(1, 16, 66));
+  transition: all 0.2s linear;
 }
+
 .hideContainer {
   width: 100%;
   display: flex;

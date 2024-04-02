@@ -31,9 +31,29 @@ export const skillsSection = {
   ],
 };
 export const headerNavigations = [
-  { name: "About", percentage: 13 },
-  { name: "Skills", percentage: 27 },
-  { name: "Experience", percentage: 60 },
+  { name: "About", percentage: 35 },
+  { name: "Skills", percentage: 70 },
+  { name: "Experience", percentage: 100 },
   { name: "Projects", percentage: 80 },
   { name: "Contact", percentage: 100 },
+];
+
+export const socialLinks = [
+  {
+    icon: "tabler:brand-github",
+    url: "https://github.com/cengiztuta/",
+  },
+  {
+    icon: "mdi:instagram",
+    url: "https://instagram.com/cengiztuta",
+  },
+
+  {
+    icon: "lucide:linkedin",
+    url: "https://www.linkedin.com/in/cengiz-tuta-bbb79a20b/",
+  },
+  {
+    icon: "lucide:facebook",
+    url: "https://www.facebook.com/cengiz.tuta07/",
+  },
 ];

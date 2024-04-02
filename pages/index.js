@@ -3,13 +3,15 @@ import styles from "../styles/Home.module.css";
 import Sidebar from "@/components/Sidebar";
 import About from "./About";
 import WhatIdo from "./WhatIdo";
+import Experience from "./Experience";
+import Projects from "./Projects";
 export default function Home() {
   return (
     <div>
       <Head>
         <title>CengizTUTA</title>
       </Head>
-      <Sidebar></Sidebar>
+      <Sidebar />
       <div className={styles.container}>
         <div className={styles.content}>
           <p>Hi, my name is</p>
@@ -24,6 +26,8 @@ export default function Home() {
       </div>
       <About />
       <WhatIdo />
+      <Experience />
+      <Projects />
     </div>
   );
 }

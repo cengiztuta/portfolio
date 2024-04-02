@@ -1,5 +1,5 @@
 .container {
-  margin-left: 5%;
+  margin-left: 3%;
   height: auto;
   position: fixed;
   bottom: 0;
@@ -9,7 +9,10 @@
   gap: 15px;
 }
 .container span {
-  height: 200px;
+  height: 120px;
   width: 2px;
   background: blue;
+}
+.icon {
+  cursor: pointer;
 }

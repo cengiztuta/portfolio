@@ -31,7 +31,15 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
-
+  const handleClick = (percentage) => {
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.clientHeight;
+    const scrollTo = (bodyHeight - windowHeight) * (percentage / 100);
+    window.scrollTo({
+      top: scrollTo,
+      behavior: "smooth", // Animasyonlu kaydırma için
+    });
+  };
   return (
     <div className={isHeaderVisible ? styles.container : styles.hideContainer}>
       <div>

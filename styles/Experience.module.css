@@ -1,0 +1,91 @@
+.container {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+.content {
+  width: 80%;
+  display: flex;
+  height: 550px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.content h1 {
+  text-align: center;
+  font-size: 40px;
+}
+.Experience {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin: 0 auto;
+  width: 70%;
+  gap: 50px;
+  margin-top: 3%;
+}
+.companies {
+  width: 20%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.companies button {
+  background: none;
+  border: 3px groove transparent;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: start;
+  border-radius: 5px;
+  color: #1f587b;
+  cursor: pointer;
+  font-weight: 700;
+}
+.companies button:hover {
+  background: #dff4fc;
+}
+.textContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.navigations {
+  text-decoration: none;
+  color: light-dark(#87a5e9, #1f587b);
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.navigations::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: light-dark(#87a5e9, #1f587b);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.navigations:hover::after {
+  transform: scaleX(1);
+}
+
+.textContainer h2 {
+  font-size: 30px;
+}
+.textContainer p {
+  font-size: 14px;
+}
+.textContainer ul {
+  height: auto;
+  padding: 0 20px;
+}
+.textContainer li {
+  margin-top: 15px;
+  font-size: 22px;
+}
