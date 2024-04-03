@@ -82,28 +82,54 @@ export const experienceSection = {
     ],
   },
 };
+import pragueImage from "../public/Prague.jpg";
+import tictactoeImage from "../public/tictactoe.jpg";
+import bookApp from "../public/bookApp.png";
+import bookOrder from "../public/bookOrder.jpg";
+import ufuksanMob from "../public/ufuksanMob.jpg";
+
 const ProjectsSection = {
-  title: "projects i've worked on",
+  title: "my projects",
   projects: [
     {
       id: getID(),
-      name: "Integra",
-      description: "An AI-Powered Leads Generation Platform.",
-      tasks:
-        "I strategically planned project milestones, led a cross-functional team, established a design system, developed the website, and integrated Stripe payments with secure authentication.",
-      url: "https://www.integraleads.xyz/",
-      img: "https://user-images.githubusercontent.com/68834718/279476369-2f69466a-71db-4da0-9afd-04f8f0efb621.jpeg",
-      tags: ["AI/ML", "NextJs", "TypeScript", "TailwindCSS", "Express"],
+      name: "Prague App",
+      repo: "https://github.com/cengiztuta/prague-app",
+      img: pragueImage, // Resmi doğrudan URL olarak atayın
+      year: 2023,
+      tags: ["React", "CSS"],
     },
     {
       id: getID(),
-      name: "uProposalGpt",
-      description: "The AI-powered platform that simplifies proposal creation.",
-      tasks:
-        "Implemented NextAuth authentication, integrated Mailchimp for newsletter subscription, developed a custom hook for dark mode, created UI components in the Dashboard, and used Notion as a CMS for the blogs page.",
-      url: "https://www.uproposalgpt.com/",
-      img: "https://user-images.githubusercontent.com/68834718/279469731-be163482-20cd-4cb3-8bcb-bbb2c1a345b8.png",
-      tags: ["Open AI", "NextJs", "TypeScript", "TailwindCSS", "Prisma"],
+      name: "Tictactoe V2",
+      repo: "https://github.com/cengiztuta/tictactoev2",
+      img: tictactoeImage, // Resmi doğrudan URL olarak atayın
+      year: 2023,
+      tags: ["React", "CSS", "Firebase"],
+    },
+    {
+      id: getID(),
+      name: "bookOrder",
+      repo: "https://github.com/cengiztuta/bookOrderApp",
+      img: bookOrder, // Resmi doğrudan URL olarak atayın
+      year: 2023,
+      tags: ["React", "CSS", "Express", "MangoDB"],
+    },
+    {
+      id: getID(),
+      name: "Website for Architect",
+      repo: "https://github.com/cengiztuta/ufuksanMob",
+      img: bookApp, // Resmi doğrudan URL olarak atayın
+      year: 2023,
+      tags: ["React", "CSS", "Express", "MangoDB"],
+    },
+    {
+      id: getID(),
+      name: "Website for Architect",
+      repo: "https://github.com/cengiztuta/ufuksanMob",
+      img: ufuksanMob, // Resmi doğrudan URL olarak atayın
+      year: 2023,
+      tags: ["React", "CSS", "Express", "MangoDB"],
     },
   ],
 };
