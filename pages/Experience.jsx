@@ -1,43 +1,39 @@
 import React from "react";
 import styles from "../styles/Experience.module.css";
+import { experienceSection, getID } from "@/helpers";
+import Link from "next/link";
 const Experience = () => {
+  const { title, experiences } = experienceSection;
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1>Where I worked</h1>
+        <h1>{title}</h1>
         <div className={styles.Experience}>
           <div className={styles.companies}>
-            <button>Celadon Soft</button>
+            <button>{experiences.company}</button>
           </div>
           <div className={styles.textContainer}>
             <h2>
-              Full-Stack Developer{" "}
-              <a
-                href="https://celadonsoft.com/"
+              {experiences.role}
+              <Link
+                href={experiences.companyUrl}
                 target={"_blank"}
                 className={styles.navigations}
               >
-                @CeladonSoft
-              </a>
+                @{experiences.company}
+              </Link>
             </h2>
-            <p> July 2023 - December 2023</p>
+            <p>
+              {" "}
+              {experiences.started}
+              <span> </span>- <span> </span>
+              {experiences.upto}
+            </p>
+
             <ul>
-              <li>
-                Implemented UI components with React & Next.js, TypeScript &
-                Tailwind CSS.
-              </li>
-              <li>
-                Developed and maintained design systems that separates design
-                logic
-              </li>
-              <li>
-                Understanding client needs and proposing effective solutions,
-                which also involves strategising and planning.
-              </li>
-              <li>
-                Lead a cross-functional team of developers and designers in the
-                creation of a SaaS product.
-              </li>
+              {experiences.tasks.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>

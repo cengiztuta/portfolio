@@ -1,8 +1,8 @@
 .container {
   width: 100%;
   height: auto;
-  margin-top: 1%;
   padding: 50px;
+  margin-top: 8%;
 }
 .content {
   width: 80%;
@@ -21,6 +21,16 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   justify-content: center;
+}
+.deneme {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0 20px;
+  row-gap: 25px;
+}
+.deneme li {
+  font-size: 20px;
 }
 .images {
   width: 30%;

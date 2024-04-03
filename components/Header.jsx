@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import { headerNavigations } from "@/helpers";
-
+import { Icon } from "@iconify-icon/react";
+import { useRouter } from "next/router";
 const Header = () => {
   const [lng, SetLng] = useState(false);
   const [theme, setTheme] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,18 +45,22 @@ const Header = () => {
   };
   return (
     <div className={isHeaderVisible ? styles.container : styles.hideContainer}>
-      <div>
+      <div
+        onClick={() => {
+          handleClick(0), router.push("#/");
+        }}
+      >
         {" "}
-        <Link href={"/"} className={styles.cengiz}>
-          <p>Cengiz TUTA </p>
-        </Link>{" "}
+        <p className={styles.cengiz}>Cengiz TUTA </p>
       </div>
 
       <div className={styles.navigationsContainer}>
         {headerNavigations.map((item, index) => (
           <div
             key={index}
-            onClick={() => handleClick(item.percentage)}
+            onClick={() => {
+              handleClick(item.percentage), router.push(`#/${item.name}`);
+            }}
             className={styles.navigations}
           >
             <p>{item.name}</p>
@@ -68,7 +75,15 @@ const Header = () => {
             id={`${theme ? "Light" : "Dark"}`}
             className={theme ? styles.toggled : styles.unToggled}
           >
-            {theme ? "Light" : "Dark"}
+            {theme ? (
+              <Icon
+                height={25}
+                style={{ color: "#fff" }}
+                icon={"solar:moon-linear"}
+              />
+            ) : (
+              <Icon height={25} icon={"ph:sun-bold"} />
+            )}
           </div>
         </div>
         <div className={styles.toggleContainer} onClick={() => SetLng(!lng)}>

@@ -31,11 +31,10 @@ export const skillsSection = {
   ],
 };
 export const headerNavigations = [
-  { name: "About", percentage: 35 },
-  { name: "Skills", percentage: 70 },
-  { name: "Experience", percentage: 100 },
-  { name: "Projects", percentage: 80 },
-  { name: "Contact", percentage: 100 },
+  { name: "About", percentage: 25 },
+  { name: "Skills", percentage: 47 },
+  { name: "Experience", percentage: 72 },
+  { name: "Projects", percentage: 98 },
 ];
 
 export const socialLinks = [
@@ -57,3 +56,56 @@ export const socialLinks = [
     url: "https://www.facebook.com/cengiz.tuta07/",
   },
 ];
+export const aboutSection = {
+  title: "About Me",
+  // Paragraphs need to be changed from containers/About.tsx
+  // Because it wasn't possible to insert anchor tags like this
+  list: {
+    title: "Here are a few technologies I’ve been working with recently:",
+    items: ["HTML", "ReactJs", "CSS", "NextJS", "JavaScript", "ExpressJS"],
+  },
+  img: "/vatsal-singh.jpg",
+};
+export const experienceSection = {
+  title: "Where I've Worked",
+  experiences: {
+    company: "CeladonSoft",
+    companyUrl: "https://celadonsoft.com/  ",
+    role: "Full-Stack Developer  ",
+    started: "july 2023",
+    upto: "December 2023",
+    tasks: [
+      "Implemented UI components with React , ExpressJs, MongoDB,Firebase",
+      "Developed and maintained design systems that separates design logic.",
+      "Understanding client needs and proposing effective solutions, which also involves strategising and planning.",
+      "Lead a cross-functional team of developers and designers in the creation of a SaaS product.",
+    ],
+  },
+};
+const ProjectsSection = {
+  title: "projects i've worked on",
+  projects: [
+    {
+      id: getID(),
+      name: "Integra",
+      description: "An AI-Powered Leads Generation Platform.",
+      tasks:
+        "I strategically planned project milestones, led a cross-functional team, established a design system, developed the website, and integrated Stripe payments with secure authentication.",
+      url: "https://www.integraleads.xyz/",
+      img: "https://user-images.githubusercontent.com/68834718/279476369-2f69466a-71db-4da0-9afd-04f8f0efb621.jpeg",
+      tags: ["AI/ML", "NextJs", "TypeScript", "TailwindCSS", "Express"],
+    },
+    {
+      id: getID(),
+      name: "uProposalGpt",
+      description: "The AI-powered platform that simplifies proposal creation.",
+      tasks:
+        "Implemented NextAuth authentication, integrated Mailchimp for newsletter subscription, developed a custom hook for dark mode, created UI components in the Dashboard, and used Notion as a CMS for the blogs page.",
+      url: "https://www.uproposalgpt.com/",
+      img: "https://user-images.githubusercontent.com/68834718/279469731-be163482-20cd-4cb3-8bcb-bbb2c1a345b8.png",
+      tags: ["Open AI", "NextJs", "TypeScript", "TailwindCSS", "Prisma"],
+    },
+  ],
+};
+
+export default ProjectsSection;

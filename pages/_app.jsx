@@ -6,10 +6,8 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <header>
-        {" "}
         <Header />
       </header>
-
       <Component {...pageProps} />
       <Footer />
     </>

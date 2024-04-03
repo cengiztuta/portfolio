@@ -37,6 +37,69 @@
 }
 .project {
   width: 100%;
-  height: 350px;
-  background: red;
+  height: 340px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.projectImage {
+  height: 75%;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.projectFooter {
+  padding: 15px 15px;
+  width: 100%;
+  height: 25%;
+  background: green;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 0 0 10px 10px;
+}
+.projectTitle {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.icon {
+  cursor: pointer;
+}
+.icon:hover {
+  color: blue;
+}
+.project:hover .projectTitle h3 {
+  color: red;
+}
+.project:hover .date {
+  color: red;
+}
+.img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.img:hover img {
+  transform: scale(1.1);
+}
+.img:focus img {
+  transform: scale(1.1);
 }
