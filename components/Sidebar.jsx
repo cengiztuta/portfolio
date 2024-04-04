@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className={styles.container}>
       {socialLinks.map((item) => (
         <a target="_blank" href={item.url} className={styles.icon}>
-          <Icon color="green" icon={item.icon} width="25" height="25" />{" "}
+          <Icon className={styles.icon} icon={item.icon} width="25" height="25" />{" "}
         </a>
       ))}
       <span></span>

@@ -39,7 +39,8 @@
   width: 100%;
   height: 340px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px;
+  box-shadow:light-dark(  rgba(0, 0, 0, 0.35), rgba(66, 66, 66, 0.35)) 5px 10px 10px;
 }
 .projectImage {
   height: 75%;
@@ -51,7 +52,7 @@
   padding: 15px;
   width: 100%;
   height: 25%;
-  background: green;
+  background: light-dark(rgb(183, 179, 179), #1e293b);
   display: flex;
   flex-direction: column;
   border-radius: 0 0 10px 10px;

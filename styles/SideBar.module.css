@@ -16,3 +16,6 @@
 .icon {
   cursor: pointer;
 }
+.icon:hover {
+  padding-bottom: 5px;
+}
