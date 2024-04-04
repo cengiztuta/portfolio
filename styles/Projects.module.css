@@ -40,6 +40,8 @@
   height: 340px;
   cursor: pointer;
   border-radius: 15px;
+  transition: all 0, 2s linear;
+
   box-shadow: light-dark(rgba(0, 0, 0, 0.35), rgba(66, 66, 66, 0.35)) 5px 10px
     10px;
 }
@@ -59,6 +61,7 @@
   border-radius: 0 0 10px 10px;
   gap: 10px;
   align-items: center;
+  transition: all 0, 2s linear;
 
   justify-content: center;
 }
@@ -79,7 +82,7 @@
   cursor: pointer;
 }
 .icon:hover {
-  color: #1E5ACA;
+  color: #1e5aca;
 }
 .project:hover .projectTitle h3 {
   color: #1e5aca;

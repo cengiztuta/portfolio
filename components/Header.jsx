@@ -40,7 +40,7 @@ const Header = () => {
     const scrollTo = (bodyHeight - windowHeight) * (percentage / 100);
     window.scrollTo({
       top: scrollTo,
-      behavior: "smooth", // Animasyonlu kaydırma için
+      behavior: "smooth",
     });
   };
   return (

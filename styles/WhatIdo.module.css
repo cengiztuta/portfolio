@@ -70,7 +70,8 @@
   border-radius: 100%;
 }
 .skill p {
-  color: light-dark(black, black);
+  color: light-dark(black, black);  transition: all 0,2s linear;
+
 }
 
 .hoverElement {

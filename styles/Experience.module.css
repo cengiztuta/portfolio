@@ -60,6 +60,7 @@
   display: inline-block;
   position: relative;
   cursor: pointer;
+  transition: all 0, 2s linear;
 }
 .navigations::after {
   content: "";
