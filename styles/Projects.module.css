@@ -40,7 +40,8 @@
   height: 340px;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow:light-dark(  rgba(0, 0, 0, 0.35), rgba(66, 66, 66, 0.35)) 5px 10px 10px;
+  box-shadow: light-dark(rgba(0, 0, 0, 0.35), rgba(66, 66, 66, 0.35)) 5px 10px
+    10px;
 }
 .projectImage {
   height: 75%;
@@ -78,13 +79,13 @@
   cursor: pointer;
 }
 .icon:hover {
-  color: blue;
+  color: #1E5ACA;
 }
 .project:hover .projectTitle h3 {
-  color: red;
+  color: #1e5aca;
 }
 .project:hover .date {
-  color: red;
+  color: #1e5aca;
 }
 .img {
   position: relative;
