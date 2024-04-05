@@ -9,8 +9,8 @@ const MySelf = () => {
         <h2> I create visually pleasing interfaces for the web.</h2>
         <h4>
           I'm a passionate Front-End web developer having an experience of web
-          applications with React.js & Next.js with TypeScript & TailwindCSS and
-          UI/UX designing.
+          applications with React.js & Next.js with HTML & CSS and UI/UX
+          designing.
         </h4>
       </div>
     </div>

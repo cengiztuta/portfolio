@@ -70,8 +70,8 @@
   border-radius: 100%;
 }
 .skill p {
-  color: light-dark(black, black);  transition: all 0,2s linear;
-
+  color: light-dark(black, black);
+  transition: all 0, 2s linear;
 }
 
 .hoverElement {
@@ -86,6 +86,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 0.3s ease;
+  box-shadow: light-dark(rgba(0, 0, 0, 0.35), rgba(66, 66, 66, 0.35)) 5px 10px
+    10px;
 }
 
 .hoverElement::before {
