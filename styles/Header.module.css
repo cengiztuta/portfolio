@@ -105,6 +105,25 @@
   transform: translateX(70%);
   transition: transform 0.2s linear;
 }
+.mobileMenuButton {
+  display: none;
+}
+.mobileMenu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navigationsContainer {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+    column-gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    animation: rightToLeft 1s forwards;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/About.module.css";
 import Image from "next/image";
 import sulu from "../public/sulu.jpg";
-import { aboutSection } from "@/helpers";
+import { aboutSection, getID } from "@/helpers";
 const About = () => {
   const { title, list } = aboutSection;
   return (
@@ -23,7 +23,7 @@ const About = () => {
           <p>{list.title}</p>
           <ul className={styles.deneme}>
             {list.items.map((item) => (
-              <li>{item}</li>
+              <li key={getID()}>{item}</li>
             ))}
           </ul>
         </div>{" "}

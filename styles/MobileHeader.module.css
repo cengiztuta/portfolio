@@ -1,0 +1,161 @@
+@media screen and (min-width: 769px) {
+  .container {
+    display: none;
+  }
+}
+
+.mobileMenuButton {
+  height: auto;
+  width: auto;
+  display: block;
+  background: none;
+  border: none;
+  color: light-dark(black, white);
+}
+.menuOpen {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  border: none;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out; /* Animasyon için geçiş efekti */
+  transform-origin: center; /* Dönme merkezi */
+}
+
+.stick {
+  background-color: light-dark(black, white);
+  width: 40px;
+  height: 2px;
+  transition: transform 0.3s ease-in-out; /* Animasyon için geçiş efekti */
+}
+
+.menuOpen.active {
+  transform: rotate(45deg); /* Menü açıkken dönme efekti */
+}
+
+.menuOpen.active .stick:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg); /* İlk çubuğun dönme efekti */
+}
+
+.menuOpen.active .stick:nth-child(2) {
+  opacity: 0; /* İkinci çubuğun görünürlüğünü kaldır */
+}
+
+.menuOpen.active .stick:nth-child(3) {
+  transform: translateY(-10px) rotate(45deg); /* Üçüncü çubuğun dönme efekti */
+}
+.menuClose {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+  font-size: 40px;
+  color: light-dark(black, white);
+  animation: rightToLeft 1s both;
+}
+
+.mobileMenu {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  animation: rightToLeft 1s both;
+}
+.menuItems {
+  background-color: light-dark(rgb(220, 219, 219), rgb(30, 41, 73));
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+  gap: 25px;
+  align-items: center;
+}
+.changeButtons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.toggleContainer {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  background-color: light-dark(white, rgb(1, 16, 66));
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s linear;
+}
+.toggled {
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  background: light-dark(rgb(1, 16, 66), red);
+  border-radius: 20px;
+  font-size: 20px;
+  transform: translateX(0);
+  transition: transform 0.2s linear;
+  color: light-dark(white, white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.unToggled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: light-dark(rgb(30, 90, 202), red);
+  height: 100%;
+  width: 60%;
+  color: light-dark(white, white);
+  border-radius: 20px;
+  font-size: 20px;
+  transform: translateX(70%);
+  transition: transform 0.2s linear;
+}
+.navigations {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.navigations::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: light-dark(black, white);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.navigations:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes rightToLeft {
+  from {
+    top: -40%;
+  }
+  to {
+    top: 90px;
+  }
+}

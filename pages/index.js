@@ -11,12 +11,11 @@ export default function Home() {
       <Head>
         <title>CengizTUTA</title>
       </Head>
-      <Sidebar />
       <MySelf />
       <About />
       <WhatIdo />
       <Experience />
-      <Projects />
+      <Projects /> <Sidebar />
     </div>
   );
 }
