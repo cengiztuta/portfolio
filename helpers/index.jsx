@@ -1,3 +1,9 @@
+import pragueImage from "../public/Prague.jpg";
+import tictactoeImage from "../public/tictactoe.jpg";
+import bookApp from "../public/bookApp.png";
+import bookOrder from "../public/bookOrder.jpg";
+import ufuksanMob from "../public/ufuksanMob.jpg";
+
 export const getID = () => `id : ${Math.random().toString(16).slice(2)}`;
 export const skillsSection = {
   title: "What I Do",
@@ -95,10 +101,10 @@ export const skillsSection2 = {
   },
 };
 export const headerNavigations = [
-  { name: "About", percentage: 25 },
-  { name: "Skills", percentage: 47 },
-  { name: "Experience", percentage: 72 },
-  { name: "Projects", percentage: 98 },
+  { name: "About", percentage: 25, mobilePercentage: 33 },
+  { name: "Skills", percentage: 47, mobilePercentage: 50 },
+  { name: "Experience", percentage: 72, mobilePercentage: 75 },
+  { name: "Projects", percentage: 98, mobilePercentage: 90 },
 ];
 
 export const socialLinks = [
@@ -146,11 +152,6 @@ export const experienceSection = {
     ],
   },
 };
-import pragueImage from "../public/Prague.jpg";
-import tictactoeImage from "../public/tictactoe.jpg";
-import bookApp from "../public/bookApp.png";
-import bookOrder from "../public/bookOrder.jpg";
-import ufuksanMob from "../public/ufuksanMob.jpg";
 
 const ProjectsSection = {
   title: "my projects",

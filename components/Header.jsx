@@ -1,47 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../styles/Header.module.css";
 import { headerNavigations } from "@/helpers";
 import { Icon } from "@iconify-icon/react";
 import { useRouter } from "next/router";
 import MobileHeader from "./MobileHeader";
+import routeToPage from "@/hooks/routeToPage";
+import scrollToHideHeader from "@/hooks/scrollToHideHeader";
 const Header = () => {
   const [lng, SetLng] = useState(false);
   const [theme, setTheme] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-
   const router = useRouter();
+  const headerRef = scrollToHideHeader();
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.pageYOffset;
-  //     if (scrollTop < lastScrollTop) {
-  //       setIsHeaderVisible(true);
-  //     } else if (scrollTop > lastScrollTop) {
-  //       setIsHeaderVisible(false);
-  //     }
-  //     setLastScrollTop(scrollTop);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [lastScrollTop]);
-
-  const handleClick = (percentage) => {
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.clientHeight;
-    const scrollTo = (bodyHeight - windowHeight) * (percentage / 100);
-    window.scrollTo({
-      top: scrollTo,
-      behavior: "smooth",
-    });
-  };
   return (
-    <div className={isHeaderVisible ? styles.container : styles.hideContainer}>
+    <div className={styles.container} ref={headerRef}>
       <div
         onClick={() => {
-          handleClick(0), router.push("#/");
+          routeToPage(0), router.push("#/");
         }}
       >
         {" "}
@@ -52,7 +27,7 @@ const Header = () => {
           <div
             key={index}
             onClick={() => {
-              handleClick(item.percentage), router.push(`#/${item.name}`);
+              routeToPage(item.percentage), router.push(`#/${item.name}`);
             }}
             className={styles.navigations}
           >
@@ -90,7 +65,6 @@ const Header = () => {
         lng={lng}
         SetLng={SetLng}
         setTheme={setTheme}
-        handleClick={handleClick}
         theme={theme}
       />
     </div>

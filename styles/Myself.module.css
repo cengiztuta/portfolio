@@ -41,7 +41,29 @@
   line-height: 50px;
   color: #475569;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+  }
 
+  .content {
+    margin-top: 3%;
+    margin: 3% auto;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    justify-content: center;
+    left: 0;
+    position: relative;
+    animation: fadeIn 1s forwards;
+  }
+}
 /* fadeIn animasyonu */
 @keyframes fadeIn {
   from {

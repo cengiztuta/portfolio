@@ -5,6 +5,7 @@ import WhatIdo from "./WhatIdo";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import MySelf from "./MySelf";
+import FeedBack from "./FeedBack";
 export default function Home() {
   return (
     <div>
@@ -15,7 +16,9 @@ export default function Home() {
       <About />
       <WhatIdo />
       <Experience />
-      <Projects /> <Sidebar />
+      <Projects />
+      <FeedBack />
+      <Sidebar />
     </div>
   );
 }

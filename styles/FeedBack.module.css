@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+.content {
+  height: auto;
+  width: 60%;
+  margin: 0 auto;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.content input {
+  background: none;
+  color: light-dark(black, white);
+  border: none; /* Tüm border'ları kaldır */
+  border-bottom: 1px groove light-dark(black, white);
+  padding: 2%;
+  font-size: 22px;
+  outline: none; /* Odaklandığında varsayılan outline'u kaldır */
+  transition: border-bottom 0.1s linear; /* Geçiş efekti ekle */
+  box-sizing: border-box; /* padding ve border'ı içeriye dahil et */
+  text-align: center;
+}
+
+/* Odaklandığında border-bottom stilini değiştir */
+.content input:focus {
+  border-bottom: 3px groove light-dark(black, white); /* Odaklandığında border-bottom'u değiştir */
+}
+.content h2 {
+  text-align: center;
+  margin-top: 1%;
+}
+.content textarea {
+  border: none; /* Tüm border'ları kaldır */
+  border-bottom: 1px groove light-dark(black, white); /* Sadece alt border'ı ekle */
+  padding: 2%;
+  font-size: 18px;
+  background: none;
+  outline: none; /* Odaklandığında varsayılan outline'u kaldır */
+  transition: border-bottom 0.1s linear; /* Geçiş efekti ekle */
+  box-sizing: border-box; /* padding ve border'ı içeriye dahil et */
+  text-align: start;
+  resize: none;
+  overflow-y: hidden;
+}
+
+/* Odaklandığında border-bottom stilini değiştir */
+.content textarea:focus {
+  border-bottom: 3px groove light-dark(black, white); /* Odaklandığında border-bottom'u değiştir */
+}
+
+.nameInputContent {
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+}

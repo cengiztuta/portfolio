@@ -21,7 +21,7 @@ const About = () => {
             a decent job.
           </p>
           <p>{list.title}</p>
-          <ul className={styles.deneme}>
+          <ul>
             {list.items.map((item) => (
               <li key={getID()}>{item}</li>
             ))}

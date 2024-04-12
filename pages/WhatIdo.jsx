@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "../styles/WhatIdo.module.css";
-import Image from "next/image";
-import img from "../public/sulu.jpg";
 import { skillsSection } from "@/helpers";
 import Skills from "@/components/Skills";
 

@@ -5,12 +5,10 @@ import { Icon } from "@iconify-icon/react";
 import Image from "next/image";
 
 const ProjectCard = ({ name, repo, img, year, tags }) => {
-  // id'i props'tan kaldırın, zaten kullanmıyorsunuz.
   return (
     <div className={styles.project}>
       <div className={styles.projectImage}>
         <div className={styles.img}>
-          {/* Resimleri doğrudan img prop'u olarak geçirin */}
           <Image src={img} alt={name} />
         </div>
       </div>

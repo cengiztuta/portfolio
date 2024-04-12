@@ -6,7 +6,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 .container button {
   width: auto;
@@ -27,10 +27,9 @@
   text-align: center;
 }
 .content {
-  padding: 0 50px;
+  padding: 0 2%;
   width: 60%;
   height: 100%;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -48,7 +47,7 @@
 .projectImage {
   height: 75%;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .projectFooter {
@@ -112,4 +111,26 @@
 }
 .tags {
   font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .content {
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
 }

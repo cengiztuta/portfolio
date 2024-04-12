@@ -29,11 +29,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 5%;
     justify-content: center;
     margin-top: 10%;
   }
   .container span {
     display: none;
+  }
+  .container a:hover {
+    padding-bottom: 0;
+    margin-bottom: 20px;
   }
 }

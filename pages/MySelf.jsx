@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Myself.module.css";
 const MySelf = () => {
   return (
     <div className={styles.container}>

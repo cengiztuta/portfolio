@@ -3,7 +3,8 @@ import styles from "../styles/MobileHeader.module.css";
 import { headerNavigations } from "@/helpers";
 import { Icon } from "@iconify-icon/react";
 import { useRouter } from "next/router";
-const MobileHeader = ({ theme, setTheme, lng, SetLng, handleClick }) => {
+import routeToPage from "@/hooks/routeToPage";
+const MobileHeader = ({ theme, setTheme, lng, SetLng }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -31,7 +32,8 @@ const MobileHeader = ({ theme, setTheme, lng, SetLng, handleClick }) => {
               <button
                 key={index}
                 onClick={() => {
-                  handleClick(item.percentage), router.push(`#/${item.name}`);
+                  routeToPage(item.mobilePercentage),
+                    router.push(`#/${item.name}`);
                   setIsOpen(false);
                 }}
                 className={styles.navigations}

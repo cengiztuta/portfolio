@@ -91,3 +91,31 @@
   margin-top: 15px;
   font-size: 22px;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+    margin-top: 20%;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .Experience {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    gap: 50px;
+    margin-top: 5%;
+    padding: 20px 0;
+  }
+
+  .textContainer li {
+    margin-top: 6%;
+    font-size: 22px;
+  }
+}
