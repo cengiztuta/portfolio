@@ -2,6 +2,7 @@ import ProjectCard from "@/components/ProjectCard";
 import styles from "../styles/Projects.module.css";
 import ProjectsSection from "@/helpers";
 import { getID } from "@/helpers";
+import Button from "@/components/Button";
 const Projects = () => {
   const { projects } = ProjectsSection;
   return (
@@ -19,7 +20,7 @@ const Projects = () => {
           />
         ))}
       </div>
-      <button>Show More</button>
+      <Button ButtonText={"Show More"} ButtonStyle={"ShowMoreButton"} />
     </div>
   );
 };

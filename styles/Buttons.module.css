@@ -1,0 +1,30 @@
+.SEND {
+  width: 30%;
+  padding: 16px 22px;
+  height: auto;
+  font-size: 18px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px groove transparent;
+  border: 2px groove gray;
+  margin-top: 10px;
+}
+.SEND:hover {
+  background: gray;
+}
+.ShowMoreButton {
+  width: auto;
+  padding: 16px 22px;
+  height: auto;
+  font-size: 18px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px groove transparent;
+  border: 2px groove gray;
+  margin-top: 2%;
+}
+.ShowMoreButton:hover {
+  background: gray;
+}

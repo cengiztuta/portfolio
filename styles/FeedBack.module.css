@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  margin-top: 3%;
   height: auto;
 }
 .content {
@@ -10,24 +11,28 @@
   display: flex;
   flex-direction: column;
   gap: 33px;
+  justify-content: center;
+  align-items: center;
 }
 
 .content input {
   background: none;
   color: light-dark(black, white);
-  border: none; /* Tüm border'ları kaldır */
+  border: none;
   border-bottom: 1px groove light-dark(black, white);
   padding: 2%;
   font-size: 22px;
-  outline: none; /* Odaklandığında varsayılan outline'u kaldır */
-  transition: border-bottom 0.1s linear; /* Geçiş efekti ekle */
-  box-sizing: border-box; /* padding ve border'ı içeriye dahil et */
+  outline: none;
+  transition: border-bottom 0.1s linear;
+  box-sizing: border-box;
   text-align: center;
 }
-
-/* Odaklandığında border-bottom stilini değiştir */
+.email {
+  width: 100%;
+  background: green;
+}
 .content input:focus {
-  border-bottom: 3px groove light-dark(black, white); /* Odaklandığında border-bottom'u değiştir */
+  border-bottom: 3px groove light-dark(black, white);
 }
 .content h2 {
   text-align: center;
@@ -45,6 +50,7 @@
   text-align: start;
   resize: none;
   overflow-y: hidden;
+  width: 100%;
 }
 
 /* Odaklandığında border-bottom stilini değiştir */
@@ -59,4 +65,25 @@
   width: 100%;
   height: auto;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    justify-content: center;
+    align-items: center;
+  }
+  .nameInputContent {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+  }
 }
