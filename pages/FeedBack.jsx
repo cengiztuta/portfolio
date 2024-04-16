@@ -1,7 +1,9 @@
+
 import React, { useState } from "react";
 import styles from "../styles/FeedBack.module.css";
 import Button from "@/components/Button";
-import { SendFeedBack } from "@/components/sendFeedBack";
+import SendFeedBack from "@/components/sendFeedBack";
+
 const FeedBack = () => {
   const [user, setUser] = useState({
     name: "",
@@ -10,10 +12,13 @@ const FeedBack = () => {
     message: "",
   });
 
+  const alertError = (errorMessage) => {
+    alert(errorMessage);
+  };
+
   return (
     <div id="Feedback" className={styles.container}>
       <div className={styles.content}>
-        {" "}
         <h1> I Need Your Feedback</h1>
         <div className={styles.nameInputContent}>
           <input
@@ -34,7 +39,7 @@ const FeedBack = () => {
           value={user.email}
           className={styles.email}
           type="email"
-          placeholder="EMAİL"
+          placeholder="EMAIL"
         />
         <h2>Message</h2>
         <textarea
@@ -44,7 +49,14 @@ const FeedBack = () => {
         />
         <Button
           onClick={() => {
-            SendFeedBack(user.name, user.lastname, user.email, user.message);
+            SendFeedBack(
+              user.name,
+              user.lastname,
+              user.email,
+              user.message,
+              setUser,
+              alertError
+            );
           }}
           ButtonStyle={"SEND"}
           ButtonText={"SEND FEEDBACK"}

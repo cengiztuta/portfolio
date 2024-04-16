@@ -1,10 +1,17 @@
-export const SendFeedBack = async (
+const SendFeedBack = async (
   newName,
   newLastName,
   newEmail,
-  newMessage
+  newMessage,
+  setUser,
+  alertError
 ) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   try {
+    if (!emailRegex.test(newEmail)) {
+      throw new Error("Please enter a valid email address");
+    }
     const response = await fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
@@ -29,5 +36,8 @@ export const SendFeedBack = async (
     }
   } catch (error) {
     console.error("Error adding new user:", error);
+    alertError(error.message);
   }
 };
+
+export default SendFeedBack;
