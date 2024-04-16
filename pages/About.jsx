@@ -6,7 +6,7 @@ import { aboutSection, getID } from "@/helpers";
 const About = () => {
   const { title, list } = aboutSection;
   return (
-    <div className={styles.container}>
+    <div id="About" className={styles.container}>
       {" "}
       <div className={styles.content}>
         <div className={styles.textContent}>

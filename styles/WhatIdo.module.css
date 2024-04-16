@@ -1,7 +1,7 @@
 .container {
   height: auto;
   width: 100%;
-  margin-top: 11%;
+  padding: 6% 0;
   overflow-y: hidden;
 }
 .content {
@@ -106,6 +106,10 @@
   opacity: 1;
 }
 @media screen and (max-width: 768px) {
+  .container{
+    
+  padding: 6% 2%;
+  }
   .content {
     height: 100%;
     width: 100%;

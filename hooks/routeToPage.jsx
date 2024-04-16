@@ -1,13 +1,10 @@
-import React from "react";
-
-const routeToPage = (percentage) => {
-  const windowHeight = window.innerHeight;
-  const bodyHeight = document.body.clientHeight;
-  const scrollTo = (bodyHeight - windowHeight) * (percentage / 100);
-  window.scrollTo({
-    top: scrollTo,
-    behavior: "smooth",
-  });
+export const handleNavigation = (name) => {
+  const targetElement = document.getElementById(name);
+  if (targetElement) {
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
 };
-
-export default routeToPage;

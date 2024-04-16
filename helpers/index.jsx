@@ -101,10 +101,11 @@ export const skillsSection2 = {
   },
 };
 export const headerNavigations = [
-  { name: "About", percentage: 25, mobilePercentage: 33 },
-  { name: "Skills", percentage: 47, mobilePercentage: 50 },
-  { name: "Experience", percentage: 72, mobilePercentage: 75 },
-  { name: "Projects", percentage: 98, mobilePercentage: 90 },
+  "About",
+  "Skills",
+  "Experience",
+  "Projects",
+  "Feedback",
 ];
 
 export const socialLinks = [

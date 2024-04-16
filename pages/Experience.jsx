@@ -5,7 +5,7 @@ import Link from "next/link";
 const Experience = () => {
   const { title, experiences } = experienceSection;
   return (
-    <div className={styles.container}>
+    <div id="Experience" className={styles.container}>
       <div className={styles.content}>
         <h1>{title}</h1>
         <div className={styles.Experience}>

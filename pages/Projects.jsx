@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 const Projects = () => {
   const { projects } = ProjectsSection;
   return (
-    <div className={styles.container}>
+    <div id="Projects" className={styles.container}>
       <h1>My Projects</h1>
       <div className={styles.content}>
         {projects.map((item) => (

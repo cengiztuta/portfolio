@@ -1,7 +1,7 @@
 .container {
   height: auto;
   width: 100%;
-  margin-top: 10%;
+  padding: 1% 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -99,6 +99,21 @@
 .tags {
   font-size: 14px;
 }
+@media screen and (min-width: 1001px) and (max-width: 1440px) {
+  .content {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.2s linear;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  .content {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.2s linear;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .content {
     padding: 2%;

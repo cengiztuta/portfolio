@@ -11,7 +11,7 @@
 .container span {
   height: 120px;
   width: 2px;
-  background: blue;
+  background-color: light-dark(rgb(1, 16, 66), white);
 }
 .icon {
   cursor: pointer;

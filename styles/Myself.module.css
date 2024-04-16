@@ -41,6 +41,11 @@
   line-height: 50px;
   color: #475569;
 }
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .content {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;

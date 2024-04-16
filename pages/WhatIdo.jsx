@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 const WhatIdo = () => {
   const { title, skills } = skillsSection;
   return (
-    <div className={styles.container}>
+    <div id="Skills" className={styles.container}>
       <h2>{title}</h2>
       <div className={styles.content}>
         <div className={styles.image}></div>

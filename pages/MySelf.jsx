@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Myself.module.css";
 const MySelf = () => {
   return (
-    <div className={styles.container}>
+    <div id="MySelf" className={styles.container}>
       <div className={styles.content}>
         <p>Hi, my name is</p>
         <h1>Cengiz TUTA</h1>
