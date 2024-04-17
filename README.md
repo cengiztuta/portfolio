@@ -32,7 +32,7 @@ Hello! My name is Cengiz and this GitHub repository hosts my personal portfolio 
 - [Next.js](https://nextjs.org/)
 - [Iconify](https://icon-sets.iconify.design/) - For icons
 - [MongoDB](https://mongodb.com/) - For FeedBack
-- [ExpressJSe](https://expressjs.com/) - For FeedBack
+- [ExpressJS](https://expressjs.com/) - For FeedBack
 
 ## How to use
 
