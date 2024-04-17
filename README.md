@@ -1,6 +1,9 @@
 <h1 align="center">
 Welcome to my portfolio workspace
 </h1>
+<p align="center">
+Hello! My name is Cengiz and this GitHub repository hosts my personal portfolio website.
+</p>
 <br>
 
 ![My Portfolio](/public/Portfolio1.jpeg)
