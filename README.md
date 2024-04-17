@@ -3,7 +3,7 @@ Welcome to my portfolio workspace
 </h1>
 <br>
 
-[![My Portfolio](/public/Portfolio1.jpeg)
+![My Portfolio](/public/Portfolio1.jpeg)
 ![Portfolio Screenshow](/public/Portfolio2.jpeg)
 ![Portfolio Screenshow](/public/Portfolio3.jpeg)
 
@@ -12,10 +12,7 @@ Welcome to my portfolio workspace
 - [Sections](#sections)
 - [Built With](#built-with)
 - [How to use](#how-to-use)
-- [Contributing](#contributing)
-- [Continuous Development](#continuous-development)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 - [Show Your Support](#show-your-support)
 
 ## Sections
