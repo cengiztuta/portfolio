@@ -67,9 +67,15 @@ Hello! My name is Cengiz and this GitHub repository hosts my personal portfolio 
 ## Contact
 
 - Github - [@cengiztuta](https://github.com/cengiztuta)
-- LinkedIn - [@cengiztuta](https://www.linkedin.com/in/cengiz-tuta-bbb79a20b/)
+- LinkedIn - [@cengiztuta]https://www.linkedin.com/in/cengiz-tuta-bbb79a20b/)
 - Instagram - [@cengiztuta](https://www.instagram.com/cengiztuta)
 - Facebook - [@cengiztuta](https://www.facebook.com/cengiz.tuta07)
+
+## Acknowledgements
+
+- [https://developer-portfolio-1hanzla100.vercel.app/](https://developer-portfolio-1hanzla100.vercel.app/) - Design Inspiration
+- [https://brittanychiang.com/](https://brittanychiang.com/) - Design Inspiration
+- [https://dev.to/andrewchmr/awesome-animated-cursor-with-react-hooks-5ec3](https://dev.to/andrewchmr/awesome-animated-cursor-with-react-hooks-5ec3) - Cursor Animation Inspiration
 
 ## Show Your Support
 
