@@ -8,7 +8,7 @@ import scrollToHideHeader from "@/hooks/scrollToHideHeader";
 import { handleNavigation } from "@/hooks/routeToPage";
 
 const Header = () => {
-  const [lng, setLng] = useState(false);
+  // const [lng, setLng] = useState(false);
   const [theme, setTheme] = useState(false);
   const router = useRouter();
   const headerRef = scrollToHideHeader();
@@ -55,15 +55,15 @@ const Header = () => {
           </div>
         </div>
 
-        <div className={styles.toggleContainer} onClick={() => setLng(!lng)}>
+        {/* <div className={styles.toggleContainer} onClick={() => setLng(!lng)}>
           <div className={lng ? styles.toggled : styles.unToggled}>
             {lng ? "TR" : "EN"}
           </div>
-        </div>
+        </div> */}
       </div>
       <MobileHeader
-        lng={lng}
-        setLng={setLng}
+        // lng={lng}
+        // setLng={setLng}
         setTheme={setTheme}
         theme={theme}
       />

@@ -60,14 +60,14 @@ const MobileHeader = ({ theme, setTheme, lng, SetLng }) => {
                   )}
                 </div>
               </div>
-              <div
+              {/* <div
                 className={styles.toggleContainer}
                 onClick={() => SetLng(!lng)}
               >
                 <div className={lng ? styles.toggled : styles.unToggled}>
                   {lng ? "TR" : "EN"}
                 </div>
-              </div>
+              </div> */}
             </div>{" "}
           </div>
         </div>
