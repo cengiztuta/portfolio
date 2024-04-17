@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1 align="center" id="top">
 Welcome to my portfolio workspace
 </h1>
 <p align="center">
@@ -75,4 +75,4 @@ Hello! My name is Cengiz and this GitHub repository hosts my personal portfolio 
 
 Give a ⭐️ if you liked this project!
 
-[Scroll to Top](#--cengiztuta)
+[Scroll to Top](#top)
